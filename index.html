@@ -5,133 +5,131 @@
   <title>2026 wird wild</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-  <style>
-  :root {
-    --gold: #ffe9a3;
-    --red: #b62334;
-    --green: #185b3a;
-  }
-
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #0b1c2c 0%, #123c24 40%, #8b1e2d 100%);
-    color: #f7f7f7;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* leichte Sternchen/Lichter im Hintergrund */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background-image:
-      radial-gradient(circle, rgba(255,255,255,0.7) 0, rgba(255,255,255,0) 55%),
-      radial-gradient(circle, rgba(255,255,255,0.4) 0, rgba(255,255,255,0) 60%);
-    background-size: 3px 3px, 2px 2px;
-    background-position: 10% 20%, 80% 70%;
-    opacity: 0.6;
-    z-index: 0;
-  }
-
-  /* Schneefall-Overlay */
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background-image:
-      radial-gradient(circle, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 55%),
-      radial-gradient(circle, rgba(255,255,255,0.6) 0, rgba(255,255,255,0) 60%),
-      radial-gradient(circle, rgba(255,255,255,0.5) 0, rgba(255,255,255,0) 65%);
-    background-size: 4px 4px, 3px 3px, 2px 2px;
-    animation: snow 18s linear infinite;
-    opacity: 0.6;
-    z-index: 0;
-  }
-
-  @keyframes snow {
-    from { transform: translateY(-10%); }
-    to   { transform: translateY(20%); }
-  }
-
-  .wrap {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 32px 24px 28px;
-    max-width: 800px;
-    background: rgba(0,0,0,0.55);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    backdrop-filter: blur(8px);
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 6px 14px;
-    margin-bottom: 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.4);
-    background: radial-gradient(circle at 0 0, rgba(255,255,255,0.25), transparent 55%);
-    color: var(--gold);
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    margin-bottom: 0.4em;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 1.5em;
-  }
-
-  .video {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 */
-  }
-
-  .video iframe,
-  .video video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    background: #000;
-  }
-
-  @media (max-width: 600px) {
-    .wrap {
-      padding: 24px 16px 20px;
+    :root {
+      --gold: #ffe9a3;
+      --red: #b62334;
+      --green: #185b3a;
     }
-  }
-</style>
 
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0b1c2c 0%, #123c24 40%, #8b1e2d 100%);
+      color: #f7f7f7;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* leichte Sternchen/Lichter im Hintergrund */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.7) 0, rgba(255,255,255,0) 55%),
+        radial-gradient(circle, rgba(255,255,255,0.4) 0, rgba(255,255,255,0) 60%);
+      background-size: 3px 3px, 2px 2px;
+      background-position: 10% 20%, 80% 70%;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    /* Schneefall-Overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 55%),
+        radial-gradient(circle, rgba(255,255,255,0.6) 0, rgba(255,255,255,0) 60%),
+        radial-gradient(circle, rgba(255,255,255,0.5) 0, rgba(255,255,255,0) 65%);
+      background-size: 4px 4px, 3px 3px, 2px 2px;
+      animation: snow 18s linear infinite;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    @keyframes snow {
+      from { transform: translateY(-10%); }
+      to   { transform: translateY(20%); }
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 24px 28px;
+      max-width: 800px;
+      background: rgba(0,0,0,0.55);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      margin-bottom: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: radial-gradient(circle at 0 0, rgba(255,255,255,0.25), transparent 55%);
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 0.4em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1.5em;
+    }
+
+    .video {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 */
+    }
+
+    .video iframe,
+    .video video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      background: #000;
+    }
+
+    @media (max-width: 600px) {
+      .wrap {
+        padding: 24px 16px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="wrap">
-  <div class="badge">Frohe Weihnachten</div>
+    <div class="badge">Frohe Weihnachten</div>
 
-  <h1>2026 wird wild</h1>
-  <p>Wir bekommen Zuwachs. Schön, dass du hier bist.</p>
+    <h1>2026 wird wild</h1>
+    <p>Wir bekommen Zuwachs. Schön, dass du hier bist.</p>
 
-  <div class="video">
+    <div class="video">
       <iframe
         src="https://www.youtube-nocookie.com/embed/4LrXIVU7rIM"
         title="Ultraschall 2026"
