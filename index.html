@@ -2,100 +2,53 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>2026 wird wild</title>
+  <title>Mini-Us is on the way</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Beispiel: Courgette (Script) + einfache Sans-Serif für Fließtext -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@300;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --gold: #ffe9a3;
-      --red: #b62334;
-      --green: #185b3a;
+      /* hier kannst du später mit exakten Werten ersetzen */
+      --card-red: #a61515;  /* Hintergrundfarbe */
+      --card-green: #254813; /* Schriftfarbe */
     }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #0b1c2c 0%, #123c24 40%, #8b1e2d 100%);
-      color: #f7f7f7;
+      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--card-red);
+      color: var(--card-green);
       display: flex;
       min-height: 100vh;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* leichte Sternchen/Lichter im Hintergrund */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,0.7) 0, rgba(255,255,255,0) 55%),
-        radial-gradient(circle, rgba(255,255,255,0.4) 0, rgba(255,255,255,0) 60%);
-      background-size: 3px 3px, 2px 2px;
-      background-position: 10% 20%, 80% 70%;
-      opacity: 0.6;
-      z-index: 0;
-    }
-
-    /* Schneefall-Overlay */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 55%),
-        radial-gradient(circle, rgba(255,255,255,0.6) 0, rgba(255,255,255,0) 60%),
-        radial-gradient(circle, rgba(255,255,255,0.5) 0, rgba(255,255,255,0) 65%);
-      background-size: 4px 4px, 3px 3px, 2px 2px;
-      animation: snow 18s linear infinite;
-      opacity: 0.6;
-      z-index: 0;
-    }
-
-    @keyframes snow {
-      from { transform: translateY(-10%); }
-      to   { transform: translateY(20%); }
     }
 
     .wrap {
-      position: relative;
-      z-index: 1;
       text-align: center;
       padding: 32px 24px 28px;
       max-width: 800px;
-      background: rgba(0,0,0,0.55);
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.25);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-      backdrop-filter: blur(8px);
     }
 
     .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      margin-bottom: 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.4);
-      background: radial-gradient(circle at 0 0, rgba(255,255,255,0.25), transparent 55%);
-      color: var(--gold);
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-family: "Courgette", system-ui;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
     }
 
     h1 {
-      margin-bottom: 0.4em;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--gold);
+      font-family: "Courgette", system-ui;
+      font-size: 2.2rem;
+      margin: 0 0 0.4em;
     }
 
     p {
-      margin-top: 0;
-      margin-bottom: 1.5em;
+      margin: 0 0 1.5em;
+      font-size: 1rem;
     }
 
     .video {
@@ -124,18 +77,18 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="badge">Frohe Weihnachten</div>
+    <div class="badge">Überraschung</div>
 
-    <h1>2026 wird wild</h1>
-    <p>Wir bekommen Zuwachs. Schön, dass du hier bist.</p>
+    <h1>Mini-Us is on the way</h1>
+    <p>2026 wird also wild. Wir freuen uns, euch die kleine, hoffentlich gesunde Maus Ende Juli vorstellen zu dürfen!</p>
 
     <div class="video">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/4LrXIVU7rIM"
-        title="Ultraschall 2026"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
+       src="https://www.youtube-nocookie.com/embed/4LrXIVU7rIM?autoplay=1&mute=1"
+    title="Ultraschall 2026"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
       </iframe>
     </div>
   </div>
