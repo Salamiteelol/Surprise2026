@@ -55,24 +55,19 @@ h1 {
     font-size: 1rem;
   }
 
-  .video {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 */
-    max-width: 640px;
-    margin: 0 auto;
-  }
+.image {
+  max-width: 640px;
+  margin: 0 auto;
+}
 
-  .video iframe,
-  .video video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    background: #000;
-  }
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
 
   @media (max-width: 600px) {
     .wrap {
@@ -93,15 +88,10 @@ h1 {
     <h1>Mini-Us is on the way</h1>
     <p>2026 wird also wild. Wir freuen uns, euch die kleine, hoffentlich gesunde Maus Ende Juli vorstellen zu dürfen!</p>
 
-    <div class="video">
-      <iframe
-       src="https://www.youtube-nocookie.com/embed/4LrXIVU7rIM?autoplay=1&mute=1"
-    title="Ultraschall 2026"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-      </iframe>
-    </div>
+<div class="image">
+  <img src="ultraschall.jpg" alt="Ultraschallbild unseres Babys, das 2026 zur Welt kommt">
+</div>
+
   </div>
 </body>
 </html>
